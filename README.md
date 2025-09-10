@@ -1,0 +1,2 @@
+- Use GNU Stow in order to link the files from this diretory to the root
+    - ```stow .```
