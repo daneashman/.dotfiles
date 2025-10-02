@@ -3,3 +3,5 @@
 - Must install zsh-vi-mode plugin
     - brew install zsh-vi-mode
     - TODO: install to dotfiles manually
+- Must install starship app
+    - brew install starship
