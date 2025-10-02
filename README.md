@@ -1,2 +1,5 @@
 - Use GNU Stow in order to link the files from this diretory to the root
     - ```stow .```
+- Must install zsh-vi-mode plugin
+    - brew install zsh-vi-mode
+    - TODO: install to dotfiles manually
