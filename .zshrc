@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias cl="clear && fastfetch"
+alias pgstart="postgres -D /opt/homebrew/var/postgresql@14"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -115,7 +116,8 @@ export NVM_DIR="$HOME/.nvm"
 # starship setup
 eval "$(starship init zsh)"
 
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/Applications/Postgres.app/Contents"
 
 # Use zsh-vi-mode app
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
