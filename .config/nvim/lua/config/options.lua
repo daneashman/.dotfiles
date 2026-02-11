@@ -19,4 +19,5 @@ vim.opt.smartcase = true
 vim.opt.scrolloff = 10
 -- Nerd Font
 vim.g.have_nerd_font = true
-
+-- Dont show mode because it's in the lualine
+vim.opt.showmode = false
