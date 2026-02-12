@@ -46,8 +46,17 @@ return {
         opts = {},
     },
     {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = false,
-        build = ':TSUpdate'
-    },
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function () 
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({
+                -- Ensure specific parsers are installed
+                ensure_installed = { "lua", "go", "svelte", "javascript", "typescript" },
+                sync_install = false,
+                highlight = { enable = true },
+                indent = { enable = true },  
+            })
+        end
+    }
 }
