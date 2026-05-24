@@ -12,7 +12,7 @@ local colors = {
 
 local bubbles_theme = {
   normal = {
-    a = { fg = colors.black, bg = colors.violet },
+    a = { fg = colors.black, bg = colors.white },
     b = { fg = colors.white, bg = colors.grey },
     c = { fg = colors.white },
   },
@@ -60,7 +60,7 @@ require('lualine').setup {
     lualine_c = {
       {
         'filename',
-        path = 3,              -- 0: Just the filename
+        path = 1,              -- 0: Just the filename
                                -- 1: Relative path
                                -- 2: Absolute path
                                -- 3: Absolute path, with tilde as the home directory
@@ -69,7 +69,8 @@ require('lualine').setup {
     },
     lualine_x = {},
     lualine_y = {},
-    lualine_z = {'tabs'}
+    --lualine_z = {'tabs'}
+    lualine_z = {}
   },
   extensions = {},
 }
