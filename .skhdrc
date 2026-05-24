@@ -2,7 +2,7 @@
 # open terminal
 alt + shift - u : open /Applications/Ghostty.app
 # open browser
-alt + shift - i : open "/Applications/Google Chrome.app"
+alt + shift - i : open "/Applications/Brave Browser.app"
 # open slack
 alt + shift - p : open /Applications/Slack.app
 # open obsidian
