@@ -7,4 +7,6 @@ alt + shift - i : open "/Applications/Brave Browser.app"
 alt + shift - p : open /Applications/Slack.app
 # open obsidian
 alt + shift - o : open /Applications/Obsidian.app
+# open email client
+alt + shift - m : open "/Applications/Proton Mail.app"
 
