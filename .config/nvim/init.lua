@@ -19,9 +19,9 @@ vim.opt.smartcase = true
 vim.opt.scrolloff = 10
 -- Nerd Font
 vim.g.have_nerd_font = true
--- Dont show mode because it's in the lualine
-vim.opt.showmode = false
 
+-- Diagnostic config
+vim.diagnostic.config({ virtual_text = true })
 
 vim.keymap.set('n', '<leader>d', vim.cmd.Ex, { desc = 'Open [D]irectory (netrw)' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -46,4 +46,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- LSP
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
+vim.lsp.config['gopls'] = {
+  cmd = { 'gopls' },
+  filetypes = { "go", "gomod", "gowork" },
+  root_markers = { 'go.mod', '.go' },
+  settings = {
+      gopls = {
+          semanticTokens = true
+      }
+  }
+}
 vim.lsp.enable('gopls')
+
