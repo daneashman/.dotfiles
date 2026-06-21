@@ -53,19 +53,21 @@ require "oil".setup({
 	},
 })
 require("mason").setup()
-require("nvim-treesitter").setup({
-	ensure_installed = { "go", "svelte", "javascript" },
-	highlight = { enable = true }
-})
+require("nvim-treesitter").setup()
+
+vim.cmd("colorscheme rose-pine")
+vim.cmd(":hi statusline guibg=NONE")
 
 vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
+		-- Enable treesitter highlighting and disable regex syntax
 		pcall(vim.treesitter.start)
 	end,
 })
 
-vim.cmd("colorscheme rose-pine")
-vim.cmd(":hi statusline guibg=NONE")
+require("nvim-treesitter").install({
+	"lua", "go", "svelte", "javascript", "html"
+})
 
 vim.lsp.enable({ "lua_ls", "gopls", "svelte" })
 
