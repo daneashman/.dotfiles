@@ -18,6 +18,10 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.keymap.set("n", "<leader>d", ":Oil<CR>", { desc = "Open [D]irectory (netrw)" })
 vim.keymap.set("n", "<leader>p", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>ff", ":Pick files<CR>")
+vim.keymap.set("n", "<leader>fh", ":Pick help<CR>")
+vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>")
+vim.keymap.set("n", "<leader>fr", ":Pick resume<CR>")
 vim.keymap.set({ "n", "v", "x" }, "<leader>s", ":e #<CR>")
 vim.keymap.set({ "n", "v", "x" }, "<leader>S", ":sf #<CR>")
 
@@ -42,18 +46,18 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/nvim-mini/mini.icons" },
 	{ src = "https://github.com/mason-org/mason.nvim" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }
-	-- To look at:
-	-- mini.pick
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+	{ src = "https://github.com/nvim-mini/mini.pick" },
 })
 require("mini.icons").setup()
+require("mason").setup()
+require("nvim-treesitter").setup()
+require('mini.pick').setup()
 require "oil".setup({
 	columns = {
 		"icon",
 	},
 })
-require("mason").setup()
-require("nvim-treesitter").setup()
 
 vim.cmd("colorscheme rose-pine")
 vim.cmd(":hi statusline guibg=NONE")
