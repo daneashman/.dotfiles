@@ -72,10 +72,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 require("nvim-treesitter").install({
-	"lua", "go", "svelte", "javascript", "html"
+	"lua", "go", "svelte", "javascript", "html", "java"
 })
 
-vim.lsp.enable({ "lua_ls", "gopls", "svelte" })
+vim.lsp.enable({ "lua_ls", "gopls", "svelte", "jls" })
 
 vim.lsp.config("lua_ls", { -- Stop lsp diagnostic warnings on vim.*
 	settings = {
