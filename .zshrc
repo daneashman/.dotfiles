@@ -126,6 +126,8 @@ eval "$(starship init zsh)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:/Applications/Postgres.app/Contents"
+export PATH="$PATH:/Users/dane/.devcontainers/bin"
 
 # Use zsh-vi-mode app
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+export PATH="$HOME/.local/bin:$PATH"
