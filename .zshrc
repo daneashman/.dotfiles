@@ -129,3 +129,5 @@ export PATH="$PATH:/Applications/Postgres.app/Contents"
 
 # Use zsh-vi-mode app
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+alias gam="/Users/dane/bin/gam7/gam"
